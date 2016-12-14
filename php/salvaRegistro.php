@@ -36,7 +36,7 @@ if ($sql = $mysqli->prepare(
 
 $mysqli->close();
 
-echo "<script>alert('Email cadastrado com sucesso.');window.location='../index.html';</script>";
+echo "<script>alert('Email cadastrado com sucesso. Agora basta compartilhar nosso post nas suas redes sociais');window.location='https://www.facebook.com/selfiemaisoficial/photos/a.1736418210010272.1073741828.1731747027144057/1744259832559443/?type=3&theater';</script>";
 
 
 ?>
