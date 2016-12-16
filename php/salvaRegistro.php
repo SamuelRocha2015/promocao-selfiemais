@@ -2,6 +2,9 @@
 
 
 $email = $_POST['email'];
+$tpEvento = $_POST['tpEvento'];
+$dtEvento = $_POST['dtEvento'];
+
 
 define('USUARIO',"codes475_admin");
 define('SENHA',"Admin@ti");
@@ -23,10 +26,10 @@ $date = date('Y-m-d');
 
 
 if ($sql = $mysqli->prepare(
-	"INSERT INTO `codes475_selfiemais`.`site_promocao` (`email`,`dt_inscricao`) VALUES (?,?);")) {
+	"INSERT INTO `codes475_selfiemais`.`site_promocao` (`email`,`tp_evento`,`dt_evento`,`dt_inscricao`) VALUES (?,?,?,?);")) {
 
 
-  $sql->bind_param('ss', $email,$date);
+  $sql->bind_param('ssss', $email,$tpEvento,$dtEvento,$date);
 
   
   $sql->execute();
@@ -36,7 +39,7 @@ if ($sql = $mysqli->prepare(
 
 $mysqli->close();
 
-echo "<script>alert('Email cadastrado com sucesso. Agora basta compartilhar nosso post nas suas redes sociais');window.location='https://www.facebook.com/selfiemaisoficial/photos/a.1736418210010272.1073741828.1731747027144057/1744259832559443/?type=3&theater';</script>";
+echo "<script>alert('Email cadastrado com sucesso. Agora basta compartilhar nosso post nas suas redes sociais');window.location='https://www.facebook.com/selfiemaisoficial/photos/a.1736418210010272.1073741828.1731747027144057/1749289668723126/?type=3&theater';</script>";
 
 
 ?>

@@ -65,7 +65,7 @@
         <div class="mailing-list">
           <h3 class="mailing-list-heading">Para participar: <br />1.Faça seu registro abaixo <br />2.Curta e compartilhe nosso post nas redes sociais!</h3>
           <div class="row">
-
+<!--
             <form class="form-inline" method="POST" action="php/salvaRegistro.php">  
               <div class="form-group">
                <label for="email" class="sr-only"></label>
@@ -73,7 +73,55 @@
               </div>
               <button class="btn btn-danger">inscrever</button>
             </form>
-         
+         -->
+
+   <form  method="POST" action="php/salvaRegistro.php">  
+<center>
+      <table>
+      <tr>
+        <td>
+              <div class="form-group">
+               <input type="text" placeholder="Data do evento (Formato : 00/00/000)" id="dtEvento" name="dtEvento" class="form-control transparent" required="true">
+            </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <div class="form-group">
+               <select  class="form-control transparent" name="tpEvento" id="tpEvento">
+                <option value="casamento">Casamento</option>
+                <option value="15 anos">15 Anos</option>
+                <option value="aniversario">Aniversário</option>
+                <option value="formatura">Formatura</option>
+                <option value="outros">Outros</option>
+              </select> 
+            </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+              <div class="form-group">
+              <input type="email" placeholder="Email para contato" id="email" name="email" class="form-control transparent" required="true">
+            </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+              <div class="form-group">
+              <center>
+                <button class="btn btn-danger">inscrever</button> 
+              </center>
+            </div>
+        </td>
+      </tr>
+      </table>
+</center>
+  </form>
+
+    <br />
 
           </div>
         </div>
